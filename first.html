@@ -4,10 +4,15 @@
 <script>
   funtion rectangle() 
   {
-    h= document.getElementBy("h"):
-    w= document.getElementBy("w"):
-    document.getElemntByid("result"):
-    r.innerHTML=h.value*w.value:
+    h= document.getElementBy("h");
+    w= document.getElementBy("w");
+    document.getElemntByid("result");
+    r.innerHTML=h.value*w.value;
+    var canvas=document.getElementByid("canvas");
+    var ctx = getcontext ("2d");
+    ctx.fillStyle="rgb(200,0,0)";
+   ctx.fillRect(10,10,10+h.value,10+w.value);
+   
   }
     
 </script>
@@ -15,6 +20,7 @@ height: <input id="h"/>
 width: <input id="w"/>
 <input name="result" type="submit" onclick= "rectangle()" />
 <p id="result"></p>
+<canvas id="canvas" width=150 height=150></canvas>
 
   </body>
 </html>
